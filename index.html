@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Pick One !</title>
+    <link rel="stylesheet" href="main.css">
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <audio class="Music" autoplay loop preload="metadata">
+		<source id="song" type="audio/mpeg">
+	</audio>
+    <div id="scene">
+        <img class="scene" src="./Resources/day-01.png" style="display:none;" alt="Aleq" />
+        <img class="scene" src="./Resources/night-01.png" style="display:none;" alt="Aleq" />
+        <img class="scene" src="./Resources/day_city-01.png" style="display:none;" alt="Aleq" />
+        <img class="scene" src="./Resources/day_mountain-01.png" style="display:none;" alt="Aleq" />
+        <img class="scene" src="./Resources/night_city-01.png" style="display:none;" alt="Aleq" />
+        <img class="scene" src="./Resources/night_mountain-01.png" style="display:none;" alt="Aleq" />
+        <div id="day_night">
+            <div id="day_b" class="button" style="top:40%;display:block;" onclick="scene(0);dn=0;">
+                <p class="button_text"> Day </p>
+            </div>
+            <div id="night_b" class="button" style="top:60%;display:block;" onclick="scene(1);dn=2;">
+                <p class="button_text"> Night </p>
+            </div>
+            <div id="city_b" class="button" style="top:40%;display:none;" onclick="scene(2)">
+                <p class="button_text"> City </p>
+            </div>
+            <div id="mountain_b" class="button" style="top:60%;display:none;" onclick="scene(3)">
+                <p class="button_text"> Mountain </p>
+            </div>
+            <div id="choosenumber_b" class="button" style="top:40%;display:none;" onclick="scene(4)">
+                <p class="button_text"> Choose number </p>
+            </div>
+            <div id="randomnumber_b" class="button" style="top:60%;display:none;" onclick="scene(5)">
+                <p class="button_text"> Random number </p>
+            </div>
+            <div id="inputbox" style="top:50%;width:200px;display:none;">
+                <input type="number" id="inputhere" placeholder="Enter a number"><br><br>
+                <input type="submit" value="Ok" onclick="playsong(0)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
